@@ -1,0 +1,120 @@
+/* src/components/LeadingCompany/LeadingCompany.css */
+
+.leading {
+  padding: 70px 0 80px;
+  background: #ffffff;
+}
+
+.leading-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.leading-title {
+  font-size: clamp(1.9rem, 2.7vw, 2.4rem);
+  color: #003363;
+  margin-bottom: 18px;
+}
+
+.leading-title span {
+  color: #0073e6;
+}
+
+.leading-text {
+  font-size: 0.97rem;
+  color: #4a5b70;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.leading-text strong {
+  font-weight: 600;
+}
+
+.leading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.leading-btn {
+  border-radius: 999px;
+  padding: 11px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.leading-btn--primary {
+  background-color: #ff7a00;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.35);
+}
+
+.leading-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(255, 122, 0, 0.45);
+}
+
+.leading-btn--ghost {
+  background-color: #ffffff;
+  color: #ff7a00;
+  border: 1px solid #ff7a00;
+}
+
+.leading-btn--ghost:hover {
+  background-color: #fff5eb;
+}
+
+/* RIGHT IMAGE */
+.leading-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leading-photo-card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+  min-height: 260px;
+  background: #d2e2f5;
+}
+
+.leading-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .leading {
+    padding: 56px 0 64px;
+  }
+
+  .leading-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .leading-right {
+    justify-content: center;
+  }
+
+  .leading-photo-card {
+    max-width: 520px;
+    width: 100%;
+  }
+
+  .leading-actions {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,134 @@
+/* src/components/Footer/Footer.css */
+
+.footer {
+  background: #24292f;
+  color: #ffffff;
+  padding-top: 40px;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* Brand */
+.footer-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  margin-top: 8px;
+  color: #d6dde6;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 6px;
+}
+
+.footer-col a {
+  color: #c5ced9;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #ffcf66;
+}
+
+/* Contact + social */
+.footer-contact-item {
+  margin-bottom: 6px;
+}
+
+.footer-social {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #333941;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Presence strip */
+.footer-middle {
+  background: #1c2025;
+  padding: 14px 16px 18px;
+  text-align: center;
+}
+
+.footer-presence-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-presence-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  color: #d6dde6;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: #171b1f;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: #9ba4b0;
+}
+
+.footer-bottom a {
+  color: #ffcf66;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

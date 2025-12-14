@@ -1,0 +1,96 @@
+/* src/components/WhySolarUP/WhySolarUP.css */
+
+.wsup {
+  padding: 70px 0 80px;
+  background: #ffffff;
+}
+
+.wsup-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.wsup-title {
+  font-size: clamp(1.9rem, 2.6vw, 2.3rem);
+  color: #003363;
+  margin-bottom: 10px;
+}
+
+.wsup-title span {
+  color: #0073e6;
+}
+
+.wsup-subtitle {
+  max-width: 880px;
+  margin: 0 auto 34px;
+  font-size: 0.97rem;
+  color: #4a5b70;
+}
+
+/* Grid of benefits */
+.wsup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.wsup-card {
+  background-color: #f7fafc;
+  border-radius: 16px;
+  padding: 28px 22px 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wsup-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: #e7f1fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.wsup-icon {
+  font-size: 2rem;
+}
+
+.wsup-card-title {
+  font-size: 1.05rem;
+  color: #003363;
+  margin-bottom: 8px;
+}
+
+.wsup-card-text {
+  font-size: 0.94rem;
+  color: #4a5b70;
+  line-height: 1.6;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .wsup-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .wsup {
+    padding: 56px 0 64px;
+  }
+
+  .wsup-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wsup-card {
+    align-items: flex-start;
+  }
+}

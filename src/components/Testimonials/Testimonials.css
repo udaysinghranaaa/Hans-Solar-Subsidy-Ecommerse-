@@ -1,0 +1,133 @@
+/* src/components/Testimonials/Testimonials.css */
+
+.testi {
+  padding: 70px 0 80px;
+  background: #f7fafc;
+}
+
+.testi-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.testi-title {
+  font-size: clamp(1.9rem, 2.6vw, 2.3rem);
+  text-align: center;
+  color: #003363;
+  margin-bottom: 10px;
+}
+
+.testi-title span {
+  color: #0073e6;
+}
+
+.testi-subtitle {
+  font-size: 0.96rem;
+  color: #4a5b70;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 32px;
+}
+
+/* Layout */
+.testi-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Video area */
+.testi-video-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testi-video-card {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  background: #000;
+}
+
+.testi-video-card iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.testi-video-caption {
+  font-size: 0.9rem;
+  color: #6b7a8f;
+}
+
+/* Reviews */
+.testi-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testi-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.testi-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.testi-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0073e6;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.testi-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #003363;
+}
+
+.testi-time {
+  font-size: 0.8rem;
+  color: #7a8ba0;
+}
+
+.testi-stars {
+  font-size: 0.8rem;
+  color: #ffb400;
+}
+
+.testi-text {
+  font-size: 0.9rem;
+  color: #4a5b70;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testi {
+    padding: 56px 0 64px;
+  }
+
+  .testi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
