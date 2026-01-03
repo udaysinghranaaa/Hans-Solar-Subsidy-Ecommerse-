@@ -7,6 +7,8 @@ const HeroVideo = () => {
   const playerContainerRef = useRef(null);
   const playerInstanceRef = useRef(null);
   const [isApiReady, setIsApiReady] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Track play/pause state
+  const [showScrollButton, setShowScrollButton] = useState(true); // Track scroll button visibility
 
   // Load YouTube Iframe API
   useEffect(() => {
@@ -46,9 +48,28 @@ const HeroVideo = () => {
           event.target.mute();
           event.target.playVideo();
         },
+        onStateChange: (event) => {
+          if (event.data === window.YT.PlayerState.ENDED) {
+            // Scroll to next section when video ends
+            document.getElementById('main-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setShowScrollButton(false); // Hide scroll button
+          }
+        },
       },
     });
   }, [isApiReady]);
+
+  const togglePlayPause = () => {
+    const player = playerInstanceRef.current;
+    if (!player) return;
+
+    if (isPlaying) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   const handlePlayWithSound = () => {
     const player = playerInstanceRef.current;
@@ -57,6 +78,7 @@ const HeroVideo = () => {
     player.unMute();
     player.setVolume(100);
     player.playVideo();
+    setIsPlaying(true);
   };
 
   return (
@@ -72,16 +94,21 @@ const HeroVideo = () => {
           <button className="hero-video-btn primary" onClick={handlePlayWithSound}>
             Play with Sound
           </button>
-          <button
-            className="hero-video-btn secondary"
-            onClick={() =>
-              document
-                .getElementById('main-content')
-                ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-          >
-            Know More
+          <button className="hero-video-btn secondary" onClick={togglePlayPause}>
+            {isPlaying ? 'Pause' : 'Play'}
           </button>
+          {showScrollButton && (
+            <button
+              className="hero-video-btn secondary"
+              onClick={() =>
+                document
+                  .getElementById('main-content')
+                  ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              Know More
+            </button>
+          )}
         </div>
       </div>
     </section>
