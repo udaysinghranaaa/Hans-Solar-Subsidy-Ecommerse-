@@ -1,0 +1,190 @@
+/* Layout base */
+.portfolio-page {
+  background: #0b1120;
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+.portfolio-inner {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.8rem 1.5rem;
+}
+
+/* Hero */
+.portfolio-hero {
+  background: radial-gradient(circle at top, #020617 0, #020617 50%, #020617 100%);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.portfolio-kicker {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-hero h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.6rem;
+}
+
+.portfolio-hero-text {
+  max-width: 720px;
+  font-size: 0.96rem;
+  color: #cbd5f5;
+  margin-bottom: 0.4rem;
+}
+
+/* Stats */
+.portfolio-stats {
+  background: #020617;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.stat-card {
+  padding: 1.2rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.13), transparent 55%),
+    rgba(15, 23, 42, 0.95);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.95);
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.stat-label {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: #cbd5f5;
+}
+
+/* Process blocks */
+.portfolio-process {
+  background: #020617;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.process-block {
+  padding: 1.2rem 1.1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.96);
+}
+
+.process-block h2 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.4rem;
+}
+
+.process-block p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* Testimonials section */
+.portfolio-testimonials {
+  background: #020617;
+  padding-bottom: 3rem;
+}
+
+.testimonials-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.25rem;
+}
+
+.testimonials-header p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  max-width: 600px;
+}
+
+/* Testimonial grid */
+.testimonials-grid {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.4rem;
+}
+
+.testimonial-card {
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.95);
+}
+
+.testimonial-image-wrapper {
+  background: #020617;
+}
+
+.testimonial-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.testimonial-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.testimonial-kw {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #38bdf8;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-quote {
+  font-size: 0.86rem;
+  color: #e5e7eb;
+}
+
+/* Footer note */
+.portfolio-footer-note {
+  margin-top: 1.8rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .portfolio-inner {
+    padding-inline: 1.1rem;
+  }
+}

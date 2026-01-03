@@ -1,82 +1,110 @@
-/* src/components/SubsidyInfo/SubsidyInfo.css */
-
 .subsidy-info {
-  padding: 50px 0 70px;  /* hero ke baad achha space */
-  background: #ffffff;
+  padding: 70px 0 80px;
+  background: radial-gradient(circle at 0% 0%, #e0f2ff 0, #f5f7fb 40%, #edf2ff 100%);
 }
 
 .subsidy-inner {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
   text-align: center;
 }
 
+/* Big, bold heading */
 .subsidy-title {
-  font-size: 2rem;
-  color: #003363;
-  margin-bottom: 8px;
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  line-height: 1.25;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .subsidy-title span {
-  color: #0056a4;
+  color: #0050a8;
 }
 
+/* Hindi line prominent */
 .subsidy-subtitle-hi {
   font-size: 1rem;
-  color: #444;
-  margin-bottom: 4px;
-  font-weight: 500;
+  color: #111827;
+  margin-bottom: 6px;
 }
 
+.subsidy-subtitle-hi strong {
+  font-weight: 700;
+}
+
+/* English explainer */
 .subsidy-subtitle-en {
-  font-size: 0.95rem;
-  color: #6b7a8f;
-  margin-bottom: 22px;
+  font-size: 0.92rem;
+  color: #4b5563;
+  margin-bottom: 26px;
 }
 
-/* TABLE */
+/* Table card */
 .subsidy-table {
-  background-color: #ffffff;
-  border-radius: 8px;
+  margin: 0 auto;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  text-align: left;
-  font-size: 0.96rem;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.16);
+  background: #ffffff;
 }
 
+/* Rows */
 .subsidy-row {
   display: grid;
-  grid-template-columns: 1.6fr 1.5fr 1.2fr;
-  padding: 12px 20px;
+  grid-template-columns: 1.8fr 1.6fr 1.2fr;
+  font-size: 0.95rem;
 }
 
 .subsidy-head {
-  background-color: #f0f5fb;
+  background: #004a96;
+  color: #ffffff;
   font-weight: 600;
-  color: #003363;
-}
-
-.subsidy-row:nth-child(odd):not(.subsidy-head) {
-  background-color: #fafcff;
 }
 
 .subsidy-row span {
-  color: #27364a;
+  padding: 14px 22px;
+  text-align: left;
 }
 
-/* RESPONSIVE */
+.subsidy-row:nth-child(odd):not(.subsidy-head) {
+  background: #f9fafb;
+}
+
+.subsidy-row:nth-child(even):not(.subsidy-head) {
+  background: #eef2f7;
+}
+
+.subsidy-col-label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.subsidy-value {
+  font-weight: 700;
+  color: #004a96;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-  .subsidy-inner {
-    padding: 0 16px;
-  }
-
   .subsidy-row {
-    grid-template-columns: 1.3fr 1.3fr 1.1fr;
-    padding: 10px 12px;
+    grid-template-columns: 1.4fr 1.3fr 1.2fr;
+    font-size: 0.88rem;
   }
 
-  .subsidy-title {
-    font-size: 1.7rem;
+  .subsidy-row span {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .subsidy-row {
+    grid-template-columns: 1.1fr 1.1fr 1.1fr;
+    font-size: 0.82rem;
+  }
+
+  .subsidy-inner {
+    padding: 0 10px;
   }
 }

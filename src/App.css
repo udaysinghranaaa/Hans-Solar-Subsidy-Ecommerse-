@@ -1,29 +1,24 @@
+/* src/App.css */
+
+/* Global reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;   /* horizontal white space hatane ke liye */
+}
+
+/* Saare elements inherit box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* App wrapper ko bhi constrain karo */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #28a745;
-  padding: 2rem;
-  color: white;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  max-width: 100%;
+  overflow-x: hidden;
 }

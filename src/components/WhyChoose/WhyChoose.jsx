@@ -1,116 +1,73 @@
 // src/components/WhyChoose/WhyChoose.jsx
 import React from 'react';
 import './WhyChoose.css';
-import team1 from '../../assets/team-1.jpg';
-import team2 from '../../assets/team-2.jpg';
-import partnersImg from '../../assets/partners.jpg';
+import img1 from '../../assets/team-1.jpg';
+import img2 from '../../assets/team-2.jpg';
+import img3 from '../../assets/partners.jpg';
+
+const rows = [
+  {
+    icon: '📍',
+    title: 'Presence in 80+ Cities Across India',
+    text: 'Local Hans Solar teams ensure faster service, better support and on-ground understanding of your specific energy needs.',
+    image: img1,
+    alt: 'Hans Solar engineers at rooftop solar site',
+  },
+  {
+    icon: '👥',
+    title: '300+ Team Strength',
+    text: 'A specialised team of solar engineers, technicians and experts ensures seamless installations and system optimisation.',
+    image: img2,
+    alt: 'Hans Solar core team standing together',
+  },
+  {
+    icon: '🧘',
+    title: 'Peace of Mind',
+    text: 'From consultation to installation, Hans Solar manages every step, paperwork and coordination so your experience stays smooth.',
+    image: img3,
+    alt: 'Hans Solar field team working on inverter panel',
+  },
+];
 
 const WhyChoose = () => {
   return (
     <section className="why-section">
       <div className="why-inner">
-
-        {/* TOP TITLE */}
         <h2 className="why-title">
           Why choose <span>Hans Solar in Uttar Pradesh?</span>
         </h2>
 
         <p className="why-intro">
-          Hans Solar combines high-performance rooftop systems, trusted engineering teams,
-          and transparent subsidy support to give Uttar Pradesh families a smooth transition
-          to clean energy.
+          Strong presence, experienced teams and quality execution make Hans Solar a trusted
+          rooftop solar partner for homes across the state.
         </p>
 
-        <p className="why-subline">
-          These are the pillars that make Hans Solar a preferred choice for subsidy-based
-          rooftop solar projects:
-        </p>
+        <div className="why-rows">
+          {rows.map((row) => (
+            <div className="why-row" key={row.title}>
+              {/* LEFT: icon + text */}
+              <div className="why-row-left">
+                <div className="why-icon-circle">
+                  <span className="why-icon-emoji">{row.icon}</span>
+                </div>
+                <div className="why-row-text">
+                  <h3>{row.title}</h3>
+                  <p>{row.text}</p>
+                </div>
+              </div>
 
-        {/* TRUST CARD */}
-        <div className="why-card">
-          <div className="why-icon-wrap">
-            <span className="why-icon-text">👷</span>
-          </div>
-          <div className="why-text-wrap">
-            <h3>7+ Years of Solar Expertise</h3>
-            <p>
-              A seasoned team that understands state policies, DISCOM processes, and
-              practical installation challenges across Uttar Pradesh.
-            </p>
-          </div>
-        </div>
-
-        {/* GRID 1: PRESENCE / TEAM / PEACE + IMAGES */}
-        <div className="why-grid">
-          <div className="why-grid-left">
-            <Feature
-              icon="📍"
-              title="Presence in 80+ Cities Across India"
-              text="Local project teams and partner network ensure faster site visits, on-ground support, and better coordination with local authorities."
-            />
-            <Feature
-              icon="👥"
-              title="300+ Strong Technical Team"
-              text="Dedicated engineers, technicians, and support staff manage everything from design to commissioning."
-            />
-            <Feature
-              icon="🧘"
-              title="End-to-End Peace of Mind"
-              text="From subsidy paperwork and net-metering to long-term service, you get a single point of contact for the entire journey."
-            />
-          </div>
-
-          <div className="why-grid-right">
-            <div className="why-photo-card">
-              <img src={team1} alt="Solar installation team on rooftop" />
+              {/* RIGHT: image card */}
+              <div className="why-row-right">
+                <div className="why-row-image-card">
+                  <img src={row.image} alt={row.alt} />
+                </div>
+              </div>
             </div>
-            <div className="why-photo-card">
-              <img src={team2} alt="Hans Solar core team group photo" />
-            </div>
-          </div>
+          ))}
         </div>
-
-        {/* GRID 2: CHANNEL / PRODUCTS / WARRANTY + IMAGE */}
-        <div className="why-grid why-grid--reverse">
-          <div className="why-grid-left">
-            <Feature
-              icon="🤝"
-              title="400+ Channel Partners Pan India"
-              text="Verified partners across regions help deliver consistent quality, faster installation, and quick service turnarounds."
-            />
-            <Feature
-              icon="✅"
-              title="High-Quality Solar Products"
-              text="Bankable Tier-1 panels, reliable inverters, and BIS-compliant structure hardware designed for long-term performance."
-            />
-            <Feature
-              icon="🔒"
-              title="Strong Warranty & AMC"
-              text="5-year system warranty, 25-year panel performance, and optional AMC plans so your savings stay protected."
-            />
-          </div>
-
-          <div className="why-grid-right">
-            <div className="why-photo-card why-photo-card--wide">
-              <img src={partnersImg} alt="Engineers working on solar installation" />
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
 };
-
-// Small reusable feature block
-const Feature = ({ icon, title, text }) => (
-  <div className="why-point">
-    <div className="why-mini-icon">{icon}</div>
-    <div>
-      <h4>{title}</h4>
-      <p>{text}</p>
-    </div>
-  </div>
-);
 
 export default WhyChoose;

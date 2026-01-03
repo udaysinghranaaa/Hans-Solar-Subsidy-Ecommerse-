@@ -1,0 +1,143 @@
+.solar-home {
+  padding: 70px 0 80px;
+  background: #f4f8fc;
+}
+
+.solar-home-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.solar-home-eyebrow {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0073e6;
+  margin-bottom: 6px;
+}
+
+.solar-home-title {
+  font-size: clamp(1.9rem, 2.7vw, 2.3rem);
+  color: #003363;
+  margin-bottom: 10px;
+}
+
+.solar-home-title span {
+  color: #ff7a00;
+}
+
+.solar-home-text {
+  font-size: 0.96rem;
+  color: #4a5b70;
+  margin-bottom: 16px;
+  max-width: 520px;
+}
+
+.solar-home-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solar-home-list li {
+  font-size: 0.94rem;
+  color: #2f3f54;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.solar-home-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #15a34a;
+}
+
+/* Right card */
+.solar-home-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.solar-home-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  padding: 18px 20px 22px;
+  max-width: 380px;
+}
+
+.solar-home-card h3 {
+  font-size: 1.1rem;
+  color: #003363;
+  margin-bottom: 12px;
+}
+
+.solar-plan {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.solar-plan:last-child {
+  border-bottom: none;
+}
+
+.solar-plan-title {
+  font-weight: 600;
+  color: #003363;
+  margin-bottom: 2px;
+}
+
+.solar-plan-detail {
+  font-size: 0.88rem;
+  color: #4a5b70;
+}
+
+.solar-plan-note {
+  font-size: 0.84rem;
+  color: #6b7a8f;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.solar-home-cta {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-radius: 999px;
+  padding: 10px 0;
+  background: #ff7a00;
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.solar-home-cta:hover {
+  background: #ff8f26;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .solar-home-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .solar-home-right {
+    justify-content: flex-start;
+  }
+
+  .solar-home-card {
+    max-width: 100%;
+  }
+}
